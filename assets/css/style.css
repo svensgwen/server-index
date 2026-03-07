@@ -1,0 +1,55 @@
+body {
+  /* Add a dark overlay on top of the background image */
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    /* dark overlay */ url(../img/seamless-leaves-bg.jpg);
+  background-repeat: repeat;
+  background-size: 200px;
+}
+
+.title {
+    font-weight: 700;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: inline-block;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* Folder Link Base */
+.folder-item a {
+  background-color: var(--bs-dark);
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.2s ease;
+}
+/* Smooth Hover Effect */
+.folder-item a:hover {
+  /* Very soft tint */
+  background-color: color-mix(in srgb, var(--bs-primary) 8%, var(--bs-dark));
+
+  /* Subtle border shift */
+  border-color: color-mix(
+    in srgb,
+    var(--bs-primary) 35%,
+    var(--bs-border-color)
+  );
+
+  /* Gentle shadow (less harsh) */
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+
+  /* Slight text accent */
+  color: var(--bs-body-color);
+}
+
+/* Active / Click Effect */
+.folder-item a:active {
+  transform: scale(0.97);
+}
+
+/* Optional: Focus (keyboard accessibility) */
+.folder-item a:focus-visible {
+  outline: 2px solid var(--bs-primary);
+  outline-offset: 2px;
+}
