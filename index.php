@@ -32,9 +32,6 @@ foreach (scandir($baseDir) as $item) {
         }
     }
 }
-
-/* Output for testing */
-// print_r($folders);
 ?>
 
 <!DOCTYPE html>
@@ -42,10 +39,12 @@ foreach (scandir($baseDir) as $item) {
 
 <head>
     <meta charset="UTF-8">
-    <title>Directory Index</title>
+    <title>Svens Server</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="./assets/plugins/bootstrap-5.3.8/css/bootstrap.min.css">
+    <link rel="shortcut icon" href="" type="image/x-icon">
+
     <link rel="stylesheet" href="./assets/css/style.css">
     <style>
 
@@ -55,12 +54,17 @@ foreach (scandir($baseDir) as $item) {
 
 <body>
 
-    <div class="container py-5">
+    <div class="container pb-5">
+        <div class="header">
+            <div class="header-content">
+                <h4 class="title mb-3">Svens Server</h4>
+                <img src="./assets/img/sven2.png" class="img-fluid">
+            </div>
 
-        <h4 class="title mb-3">Svens Server Index</h4>
-        <img src="./assets/img/gif/folder-run.gif" alt="Folder run" height="60">
+        </div>
+
         <!-- Search -->
-        <input type="text" id="search" class="form-control mb-4" placeholder="Search folders..." autofocus>
+        <input type="text" id="search" class="form-control mb-4" placeholder="Search folders..." autofocus autocomplete="off">
         <?php if (!empty($favories)): ?>
 
             <h5 class="mb-3">⭐ Favorites</h5>
@@ -101,17 +105,7 @@ foreach (scandir($baseDir) as $item) {
 
     <script src="./assets/plugins/bootstrap-5.3.8/js/bootstrap.bundle.min.js"></script>
     <script src="./assets/plugins/jquery-3.7.1.min.js"></script>
-
-    <script>
-        $(document).ready(function() {
-            $("#search").on("keyup", function() {
-                let value = $(this).val().toLowerCase();
-                $(".folder-item").filter(function() {
-                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
-                });
-            });
-        });
-    </script>
+    <script src="./assets/js/script.js"></script>
 
 </body>
 

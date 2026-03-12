@@ -7,12 +7,24 @@ body {
   background-size: 200px;
 }
 
-.title {
-    font-weight: 700;
-    background-color: rgba(0, 0, 0, 0.6);
-    display: inline-block;
-    padding: 10px;
-    border-radius: 10px;
+.header {
+  font-weight: 700;
+  margin: 20px 0;
+  width: 100%;
+  display: flex;
+}
+
+.header-content {
+  padding: 10px;
+  margin: 5px auto;
+  border-radius: 10px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.header img {
+  height: 160px;
+  width: auto;
 }
 
 /* Folder Link Base */
