@@ -1,8 +1,9 @@
 body {
   /* Add a dark overlay on top of the background image */
   background:
+    /* dark overlay */
     linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    /* dark overlay */ url(../img/seamless-leaves-bg.jpg);
+    url(../img/seamless-leaves-green.webp);
   background-repeat: repeat;
   background-size: 200px;
 }
