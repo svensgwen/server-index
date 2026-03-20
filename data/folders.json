@@ -1,4 +1,8 @@
 {
-    "favorites": [],
-    "hidden": []
+    "favorites": [
+        "linkut"
+    ],
+    "hidden": [
+        "server-index"
+    ]
 }
