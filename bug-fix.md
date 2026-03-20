@@ -8,3 +8,9 @@ sudo touch /var/www/html/server-index/data/folders.json
 sudo chown -R www-data:www-data /var/www/html/server-index/data
 sudo chmod -R 775 /var/www/html/server-index/data
 ```
+
+for FULL access
+```sh
+sudo chown -R www-data:www-data /var/www/html
+sudo chmod -R 775 /var/www/html
+```
