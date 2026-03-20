@@ -1,7 +1,5 @@
 body {
-  /* Add a dark overlay on top of the background image */
   background:
-    /* dark overlay */
     linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url(../img/seamless-leaves-green.webp);
   background-repeat: repeat;
@@ -24,45 +22,58 @@ body {
 }
 
 .header img {
-  height: 160px;
+  height: 100px;
   width: auto;
 }
+.folder-item {
+  margin-bottom: 1rem;
+}
+.folder-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 
-/* Folder Link Base */
-.folder-item a {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid var(--bs-border-color);
+  background-color: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+/* Main folder button (takes all space) */
+.folder-main {
+  flex: 1; /* 👈 THIS makes it expand */
+  padding: 10px;
+  border-radius: 8px;
   background-color: var(--bs-dark);
+  border: 1px solid transparent;
+  color: var(--bs-body-color);
+  display: flex;
+  align-items: center;
+
   transition:
     background-color 0.25s ease,
     border-color 0.25s ease,
-    box-shadow 0.25s ease,
-    transform 0.2s ease;
+    transform 0.2s ease,
+    box-shadow 0.25s ease;
 }
-/* Smooth Hover Effect */
-.folder-item a:hover {
-  /* Very soft tint */
+
+.folder-main:hover {
   background-color: color-mix(in srgb, var(--bs-primary) 8%, var(--bs-dark));
-
-  /* Subtle border shift */
-  border-color: color-mix(
-    in srgb,
-    var(--bs-primary) 35%,
-    var(--bs-border-color)
-  );
-
-  /* Gentle shadow (less harsh) */
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
-
-  /* Slight text accent */
-  color: var(--bs-body-color);
+  border-color: color-mix(in srgb, var(--bs-primary) 35%, var(--bs-border-color));
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Active / Click Effect */
-.folder-item a:active {
+.folder-main:active {
   transform: scale(0.97);
 }
 
-/* Optional: Focus (keyboard accessibility) */
-.folder-item a:focus-visible {
-  outline: 2px solid var(--bs-primary);
-  outline-offset: 2px;
+/* Right-side buttons */
+.folder-actions {
+  display: flex;
+  gap: 6px;
+}
+
+.folder-actions .btn {
+  padding: 6px 8px;
 }
